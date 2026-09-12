@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>ANI INDIA STUDIO - Watch Anime Free</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+ <!-- Main Application Container -->
+ <div class="app-container">
+ <!-- Left Sidebar -->
+ <aside class="sidebar">
+ <div class="logo-area">
+ <div class="logo-icon">A</div>
+ <div class="logo-text">
+ <h1>ANI INDIA STUDIO</h1>
+ <span>WATCH • ENJOY • BEYOND</span>
+ </div>
+ </div>
+ <nav class="nav-menu">
+ <a href="#" class="nav-item active" data-filter="all"><i class="fa-solid fa-house"></i> Home</a>
+ <a href="#" class="nav-item" data-filter="Anime"><i class="fa-solid fa-compass"></i> Anime</a>
+ <a href="#" class="nav-item" data-filter="Movie"><i class="fa-solid fa-film"></i> Movies</a>
+ <a href="#" class="nav-item" data-filter="Series"><i class="fa-solid fa-tv"></i> Series</a>
+ <a href="#" class="nav-item" data-filter="Trending"><i class="fa-solid fa-fire"></i> Trending</a>
+ <div class="nav-divider">LIBRARY</div>
+ <a href="#" class="nav-item" id="myListBtn"><i class="fa-solid fa-bookmark"></i> My List (<span 
+id="listCount">0</span>)</a>
+ <a href="#" class="nav-item"><i class="fa-solid fa-clock-rotate-left"></i> Watch History</a>
+ </nav>
+ <div class="premium-card">
+ <i class="fa-solid fa-crown crown-icon"></i>
+ <h4>GO PREMIUM</h4>
+ <p>Unlock 4K Ultra HD & No Ads</p>
+ <button class="btn-premium" onclick="alert('Premium features are active in Demo mode!')">Upgrade Now</
+button>
+ </div>
+ </aside>
+ <!-- Main Content -->
+ <main class="main-content">
+ <!-- Header Bar -->
+ <header class="top-header">
+ <div class="search-box">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <input type="text" id="searchInput" placeholder="Search anime, movie, series...">
+ </div>
+ <div class="user-panel">
+ <button class="icon-btn"><i class="fa-solid fa-bell"></i></button>
+ <div class="user-profile">
+ <div class="avatar">M</div>
+ <span class="user-name">Muskan Khatun</span>
+ </div>
+ </div>
+ </header>
+ <!-- Hero Section -->
+ <section class="hero-banner">
+ <div class="hero-overlay"></div>
+ <div class="hero-content">
+ <span class="badge">#1 TRENDING IN INDIA</span>
+<h2 class="hero-title">NARUTO SHIPPUDEN</h2>
+ <p class="hero-desc">The journey continues as Naruto returns to the Hidden Leaf Village stronger, 
+determined to rescue Sasuke and protect the ninja world from the Akatsuki.</p>
+ <div class="hero-actions">
+ <button class="btn btn-primary" onclick="openPlayer('Naruto Shippuden', 'S1: Episode 1', 'https://
+www.youtube.com/embed/QczGo-n422E')">
+ <i class="fa-solid fa-play"></i> Watch Now
+ </button>
+ <button class="btn btn-secondary" onclick="addToMyList('Naruto Shippuden')">
+ <i class="fa-solid fa-plus"></i> My List
+ </button>
+ </div>
+ </div>
+ </section>
+ <!-- Trending Shows Grid -->
+ <section class="content-section">
+ <div class="section-title">
+ <h3>Trending Now</h3>
+ <span class="subtitle">Top viewed this week</span>
+ </div>
+ <div class="anime-grid" id="animeGrid">
+ <!-- Dynamic cards inserted by script.js -->
+ </div>
+ </section>
+ </main>
+ </div>
+ <!-- Video Player Modal -->
+ <div id="playerModal" class="modal">
+ <div class="modal-box">
+ <div class="modal-header">
+ <h4 id="playerTitle">Playing Anime</h4>
+ <span class="close-btn" onclick="closePlayer()">&times;</span>
+ </div>
+ <div class="video-container">
+ <iframe id="videoIframe" src="" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+ </div>
+ </div>
+ </div>
+ <script src="script.js"></script>
+</body>
+</html>
